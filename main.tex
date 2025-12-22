@@ -1,0 +1,57 @@
+% !TEX TS-program = xelatex
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% moderncv themes
+\moderncvstyle{classic} % style options: casual, classic, banking, oldstyle, fancy
+\moderncvcolor{blue} % color options: blue, orange, green, red, purple, grey, black
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.85]{geometry} % adjust page margins
+
+% personal data
+\name{John}{Doe}
+\title{Software Engineer} % optional
+\address{123 Main Street}{75001 Paris, France}{} % optional
+\phone[mobile]{+33~6~12~34~56~78} % optional
+\email{john.doe@example.com} % optional
+\social[linkedin]{john-doe} % optional
+\photo[64pt][0.4pt]{example-photo.jpg} % optional, leave out if you prefer
+
+%------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle
+
+\section{Profile}
+Detail-oriented software engineer with 5+ years of experience in web development, data analysis, and cloud infrastructure. Fluent in English and French, with strong teamwork and communication skills.
+
+\section{Experience}
+\cventry{2022--Present}{Senior Software Engineer}{TechCorp}{Paris, France}{}{
+\begin{itemize}%
+\item Led development of cloud-native applications using Python and AWS
+\item Improved application performance by 30\% through code optimization
+\item Mentored junior developers and conducted code reviews
+\end{itemize}}
+
+\cventry{2019--2022}{Software Engineer}{WebSolutions}{Paris, France}{}{
+\begin{itemize}%
+\item Built responsive web applications using React and Node.js
+\item Collaborated with cross-functional teams to deliver projects on time
+\end{itemize}}
+
+\section{Education}
+\cventry{2015--2019}{B.Sc. in Computer Science}{University of Paris}{Paris, France}{}{}
+
+\section{Skills}
+\cvitem{Languages}{Python, JavaScript, SQL, Java}
+\cvitem{Frameworks}{React, Node.js, Django, Flask}
+\cvitem{Tools}{Git, Docker, Kubernetes, AWS, CI/CD}
+
+\section{Languages}
+\cvitemwithcomment{English}{Fluent}{}
+\cvitemwithcomment{French}{Native}{}
+
+\section{Interests}
+\cvitem{Hobbies}{Traveling, Chess, Open Source Contribution}
+
+\end{document}
