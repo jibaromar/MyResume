@@ -1,0 +1,14 @@
+{
+  "name": "LaTeX",
+  "image": "texlive/texlive:latest-small",
+  "runArgs": ["--userns=keep-id"],
+  "remoteUser": "root",
+  "postCreateCommand": "echo 'LaTeX Workshop is ready'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "James-Yu.latex-workshop"
+      ]
+    }
+  }
+}
