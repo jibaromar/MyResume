@@ -1,18 +1,19 @@
 {
-  "name": "LaTeX Dev Container",
+  "name": "Simple LaTeX Dev Container",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "Dockerfile",
+    "context": ".."
   },
-  "workspaceFolder": "/workspace",
-  "runArgs": ["--userns=keep-id"],
+  "workspaceFolder": "/workspaces",
 
   "customizations": {
     "vscode": {
+
       "extensions": [
         "james-yu.latex-workshop"
       ],
       "settings": {
-        "latex-workshop.latex.outDir": "%DIR%",
+        "latex-workshop.latex.outDir": "/tmp/",
         "latex-workshop.view.pdf.viewer": "tab"
       }
     }
