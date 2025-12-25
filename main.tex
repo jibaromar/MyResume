@@ -29,6 +29,9 @@
   \textbf{#1} \hfill #2 \\
   \textit{#3} \hfill \textit{#4} \\
 }
+\newcommand{\resumeTechs}[1]{
+   {\small\textbf{Technical Context}: #1} \\
+}
 
 % ---------- Document ----------
 \begin{document}
@@ -62,33 +65,49 @@ DevSecOps\;|\;Cloud Infrastructure\;|\;CI/CD\;|\;IaC\;|\;Cloud Migration\;|\;RCA
 \section*{Employment History}
 
 \resumeSubheading
-  {Staff Accountant, Dubone Partnership}
-  {Nov 2013 -- Sept 2019}
-  {New York, NY}
-  {}
+  {DevSecOps Engineer @Thinkproject}
+  {June 2024 -- Present}
+  {Paris}
+  {[1 year and 7 months]}
 
 \begin{itemize}
-  \resumeItem{Managed accounts by analyzing costs and revenues.}
-  \resumeItem{Prepared financial statements and reconciliations.}
-  \resumeItem{Developed strategies for minimizing liabilities.}
-  \resumeItem{Worked closely with auditors during annual audits.}
-  \resumeItem{Optimized internal accounting processes.}
+  \resumeItem{Designed and maintained Kubernetes CI/CD pipelines, supporting multiple products.}
+  \resumeItem{Built and standardized Infrastructure using Terraform/Terragrunt.}
+  \resumeItem{Led on-premise to Azure cloud migrations, implementing landing zones and infrastructure architectures.}
+  \resumeItem{Implemented PR validation pipelines with SonarQube and BlackDuck enforcing DevSecOps best practices.}
+  \resumeItem{Ensuring controlled database changes by integrating Liquibase into CI/CD pipelines.}
+  \resumeItem{Implemented monitoring with New Relic for production environments.}
+  \resumeItem{Validated restoration procedures by planning and executing Disaster Recovery and backup tests.}
+  \resumeItem{Strengthened security by remediating security vulnerabilities identified by penetration tests and Qualys scans.}
+  \resumeItem{Acted as the sole DevSecOps owner for a production product, maintaining operational stability.}
+  \resumeItem{Optimized cloud costs and CI/CD performance by contributing to yearly COGS analysis and improving pipelines efficiency.}
+  \resumeItem{Worked with developers debugging cross-system interoperability issues and producing RCA reports to prevent recurrence.}
+  \resumeItem{Enforced repository policies and best practices, including PR checks, branch protection rules, and pre-commit hooks.}
 \end{itemize}
 
-\vspace{6pt}
+\resumeTechs
+  {Kubernetes (AKS), Istio, Helm, Azure Cloud, Azure DevOps, Github Actions, Terraform/Terragrunt, Ansible, Liquibase, Cloudflare, NewRelic, Qualys, Windows Server}
+
+\vspace{9pt}
 
 \resumeSubheading
-  {Huntington Associates}
-  {Jul 2009 -- Jul 2013}
-  {Philadelphia, PA}
-  {}
+  {DevSecOps Engineer, @Likewatt}
+  {September 2022 -- January 2024}
+  {Lyon}
+  {[1 year and 4 months]}
 
 \begin{itemize}
-  \resumeItem{Oversaw the management of all company accounts.}
-  \resumeItem{Prepared and analyzed monthly financial statements.}
-  \resumeItem{Ensured compliance with internal and external accounting standards.}
-  \resumeItem{Assisted in audit preparation and documentation.}
+  \resumeItem{Setting up monitoring and alerts for services.}
+  \resumeItem{Designing and implementing a Disaster Recovery startegy for the critical services.}
+  \resumeItem{Designing, Implementing and maintaining a CI/CD pipeline with Jenkins and Kubernetes.}
+  \resumeItem{Designing, developing, and deploying a server-side PDF generation API.}
+  \resumeItem{Maintaining on Operational Condition and securing production servers.}
+  \resumeItem{Migrating the shared file system to a dedicated server.}
+  \resumeItem{Documenting infrastructure and procedures.}
 \end{itemize}
+
+\resumeTechs
+  {Terraform, Ansible, Packer, Prometheus, Grafana, Alertmanager, Jenkins, Docker, Kubernetes, Proxmox, Caprover, Firebase, MariaDB, Gitlab, Wikis, NFS, NodeJS, Express, Handlebars, Flask, Python, Ubuntu, pfSense, OVH}
 
 % ---------- Education ----------
 \section*{Education}
