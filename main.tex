@@ -1,4 +1,4 @@
-\documentclass[9pt]{article}
+\documentclass[10pt]{article}
 
 % ---------- Page setup ----------
 \usepackage[letterpaper,margin=.5in]{geometry}
@@ -7,6 +7,8 @@
 \usepackage{titlesec}
 \usepackage{tabularx}
 \usepackage{fontawesome}
+\usepackage{datenumber}
+\usepackage{calc}
 
 \pagenumbering{gobble}
 \setlength{\parindent}{0pt}
@@ -22,6 +24,50 @@
 \titlespacing{\section}{0pt}{12pt}{6pt}
 
 \setlist[itemize]{leftmargin=3em, noitemsep, topsep=2pt}
+
+% ---------- Last Experience Duration ----------
+\newcounter{datetoday}
+\newcounter{diffyears}
+\newcounter{diffmonths}
+\newcounter{diffdays}
+
+
+\newcommand{\difftoday}[3]{%
+      \setmydatenumber{datetoday}{\the\year}{\the\month}{\the\day}%
+      \setmydatenumber{diffdays}{#1}{#2}{#3}%
+      \addtocounter{diffdays}{-\thedatetoday}%
+      \ifnum\value{diffdays}>0
+        \def\diffbefore{in }%
+        \def\diffafter{}%
+      \else
+        \def\diffbefore{}%
+        \def\diffafter{ago}%
+        \setcounter{diffdays}{-\value{diffdays}}%
+      \fi
+      \setcounter{diffyears}{\value{diffdays}/365}%
+      \setcounter{diffdays}{\value{diffdays}-365*\value{diffyears}}%
+      \setcounter{diffmonths}{\value{diffdays}/30}%
+      \setcounter{diffdays}{\value{diffdays}-30*\value{diffmonths}}%
+      %
+      \diffbefore
+      \ifnum\value{diffyears}=0
+      \else
+        \ifnum\value{diffyears}>1
+            \thediffyears\space years,
+        \else
+            \thediffyears\space year,
+        \fi
+      \fi
+      \ifnum\value{diffmonths}=0
+      \else
+        \ifnum\value{diffmonths}>1
+            \thediffmonths\space months
+        \else
+            \thediffmonths\space month
+        \fi
+      \fi
+      \diffafter
+}
 
 % ---------- Custom commands ----------
 \newcommand{\resumeItem}[1]{{\small\item #1}}
@@ -75,7 +121,7 @@ Developer Enablement\;|\;Cross-Team Collaboration\;|\;Production Ownership\;|\;T
   {DevSecOps Engineer @Thinkproject}
   {June 2024 -- Present}
   {Paris}
-  {[1 year and 7 months]}
+  {[\difftoday{2024}{06}{01}]}
 
 \begin{itemize}
   \resumeItem{Designed and maintained Kubernetes CI/CD pipelines, supporting multiple products.}
